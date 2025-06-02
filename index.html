@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Badjias&Code - Devon Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">&lt;`&gt; Badjias&Code</div>
+        <ul class="nav-links">
+            <li><a href="#about" data-section="about">About</a></li>
+            <li><a href="#experience" data-section="experience">Experience</a></li>
+            <li><a href="#projects" data-section="projects">Projects</a></li>
+        </ul>
+        <button class="contact-btn" onclick="scrollToSection('footer')"><span>Contact</span></button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-badge">
+            Software Engineer & Media Buff
+        </div>
+        <h1 class="typewriter">Heyah I'm Devon;<br>I go by Badjia</h1>
+        <p class="hero-subtitle">A software engineer and media buff from Mozambique based in Warsaw</p>
+        <div class="hero-actions">
+            <button class="view-work-btn" onclick="scrollToSection('experience')">View My Projects</button>
+            
+        </div>
+    </section>
+
+    <!-- Content sections with background -->
+    <div class="content-section">
+        <!-- About Me Section -->
+        <section class="about-section scroll-fade-in" id="about">
+            <div class="pulse-ring"></div>
+            <div class="coin-container" id="coin" onclick="flipCoin()">
+                <div class="glow-effect"></div>
+                <div class="coin-side coin-front">
+                    <img src="icons/orb blue 3.png" alt="Blue Orb" class="coin-image" onerror="console.error('Failed to load blue orb image')">
+                </div>
+                <div class="coin-side coin-back">
+                    <img src="icons/orb red.png" alt="Red Orb" class="coin-image" onerror="console.error('Failed to load red orb image')">
+                </div>
+            </div>
+            <h2>About Me</h2>
+            <div class="about-content">
+                <p>I am an aspiring software engineer with a thrist for problem solving in client serving areas.</p>  
+                    <p>I currently work as a Financial Analyst at <a href="https://www.jll.com/" class="red-orb-link" target="_blank" rel="noopener noreferrer">@JLL</a>. I previously dabbled in game dev and worked at <a href="https://www.testroniclabs.com/" class="red-orb-link" target="_blank" rel="noopener noreferrer">@Testronic</a>. I am currently pursuing my master in data science at <a href="https://eng.pw.edu.pl/" class="red-orb-link" target="_blank" rel="noopener noreferrer">Warsaw University of Technology</a>.</p>
+                
+                    <p>These are the current technologies I dabble in: </p>
+                <ul class="about-tech-list grid-tech-list">
+                    <li>Python</li>
+                    <li>JavaScript</li>
+                    <li>Java</li>
+                    <li>SQL</li>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>React</li>
+                    <li>Node.js</li>
+                    <li>Wireshark</li>
+                    <li>Metasploit</li>
+                    <li>Nmap</li>
+                    <li>Git</li>
+                    <li>VS Code</li>
+                </ul>
+                                
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section class="experience-section scroll-fade-in" id="experience">
+            <h2>/ experience</h2>
+            <div class="experience-container">
+                <div class="experience-nav">
+                    <ul>
+                        <li data-experience="jll" class="active">JONES LANG LASALLE</li>
+                        <li data-experience="testronic">TESTRONIC LABORATORIES</li>
+                        <li data-experience="zua">ZUA PRODUCOES</li>
+                        <li data-experience="bootleg">BOOTLEG STUDIOS</li>
+                        <li data-experience="freelance">FREELANCE DESIGNER</li>
+                    </ul>
+                </div>
+                <div class="experience-content">
+                    <div class="experience-item active" data-experience-content="jll">
+                        <div class="experience-header">
+                            <h3 class="experience-title">Analyst — Financial Management @ <span class="experience-company">Jones Lang Lasalle</span></h3>
+                            <div class="experience-period">02/2024 - Present</div>
+                            <div class="experience-location">Warsaw, Poland</div>
+                        </div>
+                        <ul class="experience-achievements">
+                            <li>Maintained lease databases with 99.5% accuracy using Portfolio and CoStar, managing 500+ property records monthly</li>
+                            <li>Generate comprehensive reports summarizing key financial metrics and insights for internal teams and clients</li>
+                            <li>Troubleshoot technical issues related to software and data management</li>
+                            <li>Generated 20+ comprehensive financial reports monthly, providing critical insights that improved client decision-making by 25%</li>
+                        </ul>
+                    </div>
+                    <div class="experience-item" data-experience-content="testronic">
+                        <div class="experience-header">
+                            <h3 class="experience-title">FQA Technician @ <span class="experience-company">Testronic Laboratories Limited</span></h3>
+                            <div class="experience-period">01/2023 - 01/2024</div>
+                            <div class="experience-location">Warsaw, Poland</div>
+                        </div>
+                        <ul class="experience-achievements">
+                            <li>Performed manual and automated testing for AAA/indie games using Jira and TestRail, identifying 200+ critical bugs pre-release</li>
+                            <li>Improved regression testing pipeline efficiency, accelerating release cycles by 20% and reducing time-to-market</li>
+                            <li>Performed manual and automated testing for 5+ AAA/indie games, identifying 200+ critical bugs pre-release</li>
+                        </ul>
+                    </div>
+                    <div class="experience-item" data-experience-content="zua">
+                        <div class="experience-header">
+                            <h3 class="experience-title">Service Desk Operator @ <span class="experience-company">ZUA Producoes</span></h3>
+                            <div class="experience-period">01/2022 - 08/2022</div>
+                            <div class="experience-location">Maputo, Mozambique</div>
+                        </div>
+                        <ul class="experience-achievements">
+                            <li>Provided first-level IT support, resolving 90% of tickets within SLA timeframes.</li>
+                            <li>Maintained computer systems and software: Installing updates, monitoring performance, and resolving security issues</li>
+                            <li>Tracked the status of issues and identified trends</li>
+                        </ul>
+                    </div>
+                    <div class="experience-item" data-experience-content="bootleg">
+                        <div class="experience-header">
+                            <h3 class="experience-title">Business Founder @ <span class="experience-company">Bootleg Studios</span></h3>
+                            <div class="experience-period">03/2021 - Present</div>
+                            <div class="experience-location">Maputo, Mozambique</div>
+                        </div>
+                        <ul class="experience-achievements">
+                            <li>Co-founded and operated a tactical and creative agency in Maputo, Mozambique</li>
+                            <li>Connecting artists with potential business partners, creating opportunities for both parties involved</li>
+                            <li>Designed the agency's complete brand image, and merchandise</li>
+                        </ul>
+                    </div>
+                    <div class="experience-item" data-experience-content="freelance">
+                        <div class="experience-header">
+                            <h3 class="experience-title">Graphic Designer @ <span class="experience-company">Independent</span></h3>
+                            <div class="experience-period">01/2020 - Present</div>
+                            <div class="experience-location">Maputo, Mozambique</div>
+                        </div>
+                        <ul class="experience-achievements">
+                            <li>Developed 30+ UI/UX prototypes using Figma and Adobe Suite, with 85% of designs approved on first iteration</li>
+                            <li>Managed client relationships resulting in 40% repeat business rate and 3 major contract renewals</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects-section scroll-fade-in" id="projects">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <!-- Large Project -->
+                <div class="project-card project-large">
+                    <h3>LR Micromouse AI</h3>
+                    <p>A web-based maze solver that uses Q-Learning reinforcement learning to train an AI mouse to find the optimal path through randomly generated mazes. Watch as the mouse learns from trial and error, gradually improving its pathfinding skills over multiple generations.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/devonZeuz/LR-Micromouse-AI" target="_blank" rel="noopener noreferrer" class="project-link">View on GitHub</a>
+                        <a href="https://devonzeuz.github.io/LR-Micromouse-AI/" target="_blank" rel="noopener noreferrer" class="project-link">Open Demo</a>
+                    </div>
+                </div>
+                
+                <!-- Small Projects -->
+                <div class="project-card project-small">
+                    <h3>Weather App</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">###</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/yourusername/weather-app" target="_blank" rel="noopener noreferrer" class="project-link">View on GitHub</a>
+                        <a href="https://your-weather-demo.com" target="_blank" rel="noopener noreferrer" class="project-link">Open Demo</a>
+                    </div>
+                </div>
+                
+                <div class="project-card project-small">
+                    <h3>Task Manager</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">###</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/yourusername/task-manager" target="_blank" rel="noopener noreferrer" class="project-link">View on GitHub</a>
+                        <a href="https://your-taskmanager-demo.com" target="_blank" rel="noopener noreferrer" class="project-link">Open Demo</a>
+                    </div>
+                </div>
+                
+                <div class="project-card project-small">
+                    <h3>Crypto Tracker</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">###</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/yourusername/crypto-tracker" target="_blank" rel="noopener noreferrer" class="project-link">View on GitHub</a>
+                        <a href="https://your-crypto-demo.com" target="_blank" rel="noopener noreferrer" class="project-link">Open Demo</a>
+                    </div>
+                </div>
+                
+                <div class="project-card project-small">
+                    <h3>Social Media Dashboard</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">###</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/yourusername/social-dashboard" target="_blank" rel="noopener noreferrer" class="project-link">View on GitHub</a>
+                        <a href="https://your-social-demo.com" target="_blank" rel="noopener noreferrer" class="project-link">Open Demo</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>&lt;`&gt; Badjias&Code</h3>
+                    <p>Passionate software engineer creating innovative digital solutions. Based in Warsaw, originally from Mozambique.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#about" onclick="scrollToSection('about')">About</a></li>
+                        <li><a href="#experience" onclick="scrollToSection('experience')">Experience</a></li>
+                        <li><a href="#projects" onclick="scrollToSection('projects')">Projects</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="https://www.linkedin.com/in/devcardelias" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                        <li><a href="https://github.com/devonZeuz" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="mailto:devonelias4@gmail.com">Email</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                © 2025 Devon Elias. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
